@@ -1,5 +1,7 @@
-#MAUI_Hybrid 
-
+---
+tags:
+  - MAUI_Hybrid
+---
 If you have a complex UI that has a lot of nested `@if`, you can't call `StateHasChanged()` (or `InvokeAsync(StateHasChanged)`) very frequently since that will cause a memory leak like the image below (it was recorded for 10 minutes from the prayer times app before fixing the memory leak):
 
 ![[Pasted image 20250930082503.png]]
