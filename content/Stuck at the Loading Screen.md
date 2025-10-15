@@ -1,3 +1,4 @@
+#MAUI_Hybrid 
 If you for some reason removed the `autostart` attribute from the `<script>` tag initializing the Blazor Webview, the app would simply won't load.
 ## What is `autostart`?
 
