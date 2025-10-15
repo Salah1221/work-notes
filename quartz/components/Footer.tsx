@@ -9,8 +9,9 @@ export default (() => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
+          © {year} NESCO <br />
           {i18n(cfg.locale).components.footer.createdWith}{" "}
-          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>   © {year}
+          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>  
         </p>
       </footer>
     )
