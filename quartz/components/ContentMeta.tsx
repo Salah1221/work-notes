@@ -45,10 +45,16 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       return (
         <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
           {segments}
+          {fileData.frontmatter?.author && fileData.frontmatter?.author.length > 0 && (
+            <>
+              {"\u00A0\u00A0·\u00A0\u00A0"}
+              By {fileData.frontmatter.author}
+            </>
+          )}
         </p>
       )
-    } else {
-      return null
+  } else {
+    return null
     }
   }
 
