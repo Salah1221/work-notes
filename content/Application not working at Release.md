@@ -1,4 +1,5 @@
 #MAUI_Hybrid 
+
 Imagine that you have tested your application in Debug mode and everything was working very well, then you publish your application and open it and... it doesn't behave like it did in Debug mode 😢. That bug could happen for several reasons, but for my case (in the prayer times app), the reason was that the AOT compilation, linker, and trimmer was removing important JavaScript code used by C# that it thought is unused. I simply disabled all of them by adding the following code in the `.csproj` file:
 
 ```xml
