@@ -12,9 +12,6 @@ const config: QuartzConfig = {
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
     locale: "en-US",
     baseUrl: "salah1221.github.io/work-notes/",
     ignorePatterns: ["private", "templates", ".obsidian"],
