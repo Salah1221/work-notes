@@ -43,15 +43,23 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       }
 
       return (
-        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
-          {segments}
+        <>
           {fileData.frontmatter?.author && fileData.frontmatter?.author.length > 0 && (
-            <>
-              {"\u00A0\u00A0·\u00A0\u00A0"}
-              By {fileData.frontmatter.author}
-            </>
-          )}
-        </p>
+              <>
+                By {fileData.frontmatter?.authorUrl ? (
+                  <a href={fileData.frontmatter.authorUrl} target={"_blank"}>
+                    {fileData.frontmatter.author}
+                  </a>
+                ) : (
+                  fileData.frontmatter.author
+                )}
+                <br />
+              </>
+            )}
+          <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
+            {segments}
+          </p>
+        </>
       )
   } else {
     return null
