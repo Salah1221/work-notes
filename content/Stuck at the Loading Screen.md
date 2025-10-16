@@ -17,7 +17,7 @@ If you for some reason removed the `autostart` attribute from the `<script>` tag
 - In a WebView, there’s a short window where the **native bridge** (WebView <-> .NET) might not be ready yet. If auto‑boot happens too early, startup can fail or hang.
     
 - Setting `autostart="false"` tells the Blazor script **“don’t boot yourself”**.  
-    Then the **BlazorWebView control** (on the native side) calls `Blazor.start()` at the correct time, once the bridge is ready—hence your app started working.
+    Then the **BlazorWebView control** (on the native side) calls `Blazor.start()` at the correct time, once the bridge is ready.
     
 
 ### When to use it
