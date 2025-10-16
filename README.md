@@ -33,4 +33,6 @@ This command commits the latest build output to the configured deployment target
 
 ## Credits
 
+![Quartz OG Image](./quartz/static/og-image.png)
+
 This site is built with [Quartz](https://quartz.jzhao.xyz/). Huge thanks to the Quartz community for maintaining the tooling that powers this workflow.
