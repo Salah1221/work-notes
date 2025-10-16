@@ -3,12 +3,9 @@
   color: var(--darkgray);
 
   &[show-comma="true"] {
-    > *:not(:last-child) {
-      margin-right: 8px;
-
-      &::after {
-        content: ",";
-      }
+    > *:not(:last-child)::after {
+      content: "•";
+      margin-inline: 6px;
     }
   }
 }
