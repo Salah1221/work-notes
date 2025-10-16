@@ -2,7 +2,9 @@
 tags:
   - MAUI_Hybrid
   - bug
+  - memory_leak
 author: Salah Najem
+title: StateHasChanged() Memory Leak
 ---
 If you have a complex UI that has a lot of nested `@if`, you can't call `StateHasChanged()` (or `InvokeAsync(StateHasChanged)`) very frequently since that will cause a memory leak like the image below (it was recorded for 10 minutes from the prayer times app before fixing the memory leak):
 
