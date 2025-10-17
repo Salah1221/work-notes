@@ -9,9 +9,15 @@ export default (() => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
-          © {year} NESCO <br />
+          © {year}{" "}
+          <a target={"_blank"} href="https://www.nesco.com.lb/">
+            NESCO
+          </a>{" "}
+          <br />
           {i18n(cfg.locale).components.footer.createdWith}{" "}
-          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>  
+          <a target={"_blank"} href="https://quartz.jzhao.xyz/">
+            Quartz v{version}
+          </a>
         </p>
       </footer>
     )
