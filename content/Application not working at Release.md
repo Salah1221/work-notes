@@ -20,3 +20,7 @@ Imagine that you have tested your application in Debug mode and everything was w
 >Don't disable those optimizations if they aren't causing any issues for your application
 
 In my case, I was working with .NET 9 on android and thus the `TargetFramework` is `Release|net9.0-android` (the `Release` keyword is to indicate that those changes I want only in release). And that solved the issue!
+
+>[!note]
+>I would like to note that AOT compilation and linker will not be disabled on publish even after adding those lines in the `*.csproj` ... For now, you simply take the apk that is produced after running the app in "Release" mode (make sure that you've signed it before).
+
