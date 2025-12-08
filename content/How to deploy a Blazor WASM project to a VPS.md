@@ -52,7 +52,7 @@ Here we're listening to port `8080` without specifying a domain name (in the `se
 - If neither exists, return `index.html` instead.
 
 >[!warning] Note
->In a real application, the listening port should be `80` and there should be a domain name (for example `server_name app.example.com;`)
+>In a real application, the listening port should be `80` and there should be a domain name (for example `server_name app.example.com;`). Also, you'd configure the SSL certificate for `https` (I'll add how to do that in a later date Insha'Allah)
 
 Then enable the config using a symlink:
 
