@@ -50,7 +50,7 @@ And finally create a symlink to the `dotnet` in the `/usr/bin` (so you could use
 sudo ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
 ```
 
-Now you can go to the project's root directory ()
+Now you can go to the project's root directory (in my case it is `/var/www/myBlazorApp`) and run the application:
 
 ```bash
 dotnet BlazorApp2.dll
