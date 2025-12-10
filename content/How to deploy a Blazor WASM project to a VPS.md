@@ -3,6 +3,7 @@ tags:
   - blazor
   - blazor_web_assembly
   - tips
+  - deployment
 author: Salah Najem
 authorUrl: https://github.com/Salah1221
 ---
