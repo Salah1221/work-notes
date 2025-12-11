@@ -66,7 +66,7 @@ server {
     server_name _;  # accept any host / IP
 
     # Optional: if you want NGINX to serve static files from your publish directory
-    root /var/www/PrayerTimesServer/wwwroot;
+    root /var/www/myBlazorApp/wwwroot;
 
     gzip on;
     gzip_types text/plain application/json text/css application/javascript;
@@ -100,6 +100,11 @@ server {
     }
 }
 ```
+
+- Here the config first sets the root web directory to be the directory where all the static assets are (in our case it is `/var/www/myBlazorApp/wwwroot`) and turns on gzip compression (to reduce the size of static assets before they are sent over the network) specifying the type of files to be compressed and to only compress files that are larger than 1 KB (`gzip_min_length 1024`)
+- Then in the `location /`, we try matching the URL for a static files (`$uri`) if there isn't any, then we forward the request to the named location `@proxy`.
+- After that in the location `@proxy`, we pass all the traffic to `localhost:5000` (let Blazor server handle the URL). Then we set the needed headers to enable websockets (for SignalR to work) and to send some info about the client (the IP address, whether the client used HTTP or HTTPS etc)
+- Finally, we set a large timeout for inactivity (1 hour) because Blazor Server application uses long-lived SignalR connection. And we turned off buffering because Blazor Server application uses real-time SignalR connections.
 
 Then create a symlink to that config to enable it:
 
